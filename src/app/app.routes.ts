@@ -9,11 +9,11 @@ export const routes: Routes = [
   {
     path: 'home',
     loadComponent: () =>
-      import('./home/home.component').then((m) => m.HomeComponent) // -> Lazy loading
+      import('home').then((m) => m.HomeComponent) // -> Lazy loading
   },
   {
     path: 'users',
     loadComponent: () =>
-      import('./users/users.component').then((m) => m.UsersComponent) // -> Lazy loading
+      import('users').then((m) => m.UsersComponent) // -> Lazy loading
   },
 ];
