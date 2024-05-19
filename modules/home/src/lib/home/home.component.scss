@@ -1,0 +1,17 @@
+.header {
+  background-color: #591396;
+  color: #fff;
+  height: 70px;
+  padding: 5px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.logo {
+  font-size: 24px;
+  font-family: 'Lucida Sans', sans-serif;
+}

@@ -14,6 +14,14 @@ export const routes: Routes = [
   {
     path: 'users',
     loadComponent: () =>
-      import('users').then((m) => m.UsersComponent) // -> Lazy loading
+      import('users').then((m) => m.UsersComponent), // -> Lazy loading
+    // rota para pegar um usuario
+    children: [
+      {
+        path: ':id',
+        loadComponent: () =>
+          import('users').then((m) => m.UserDetailComponent), // -> Lazy loading
+      },
+    ],
   },
 ];

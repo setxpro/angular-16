@@ -1,1 +1,17 @@
-<p>users works!</p>
+<!-- Importar o Router module diretamente no componente para que eu possa utilizar o <router-outlet/> -->
+
+<router-outlet />
+
+<ul>
+
+  <!--
+    ele está se inscrevendo e mandando os valores para "user"
+    // Nova sinsaxe
+   -->
+
+  @for (user of users$ | async; track user.id) {
+      <li>
+        <a [routerLink]="[user.id]">{{ user.name }}</a>
+      </li>
+  }
+</ul>
